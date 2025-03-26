@@ -17,16 +17,35 @@ namespace SNGwatcher
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+
             valueCnMargin.Text = "--.-- dB";
-            valueIdealRange.Text = string.Format("{0:F2} - {1:F2} dB", _config.Receiver.IdealMin, _config.Receiver.IdealMax);
+            valueIdealRange.Text = _config.Receiver.IdealMin.ToString("F2").PadLeft(5, '0') + " - " + _config.Receiver.IdealMax.ToString("F2").PadLeft(5, '0') + " dB";
             valueReceiverType.Text = _config.Receiver.Type;
             valueReceiverAddress.Text = _config.Receiver.Address;
-            valueReceiverStatus.Text = "-";
+            if (_receiver != null)
+            {
+                valueReceiverStatus.Text = _receiver.Type;
+            }
+            else
+            {
+                valueReceiverStatus.Text = $"{_config.Receiver.Type} (unknown)";
+                valueReceiverStatus.ForeColor = Color.DarkRed;
+            }
             valueRemoteBaseUrl.Text = _config.Remote.BaseURL;
             valueRemoteId.Text = _config.Remote.ID;
             valueRemoteLastUpdate.Text = "-";
             valueRemoteLastUpdateStatus.Text = "-";
             valueRemoteLastSuccessfulUpdate.Text = "-";
+
+            if (_receiver != null)
+                _receiver.StatusUpdate += _receiver_StatusUpdate;
+
+        }
+
+        private void _receiver_StatusUpdate(IReceiver receiver, ReceiverData status)
+        {
+            valueCnMargin.Text = status.CnMargin.ToString("F2").PadLeft(5, '0');
+            valueReceiverStatus.Text = status.ReadSuccess ? "OK" : "unavailable";
         }
 
     }
