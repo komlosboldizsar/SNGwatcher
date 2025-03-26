@@ -2,9 +2,15 @@ namespace SNGwatcher
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm() => InitializeComponent();
+
+        public MainForm(Config config)
+            : this()
         {
-            InitializeComponent();
+            config = _config;
         }
+
+        private readonly Config _config;
+
     }
 }
