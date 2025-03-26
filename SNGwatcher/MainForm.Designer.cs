@@ -426,6 +426,7 @@
             Name = "MainForm";
             Padding = new Padding(10, 5, 10, 10);
             Text = "SNGwatch";
+            Load += MainForm_Load;
             tableLayoutStatus.ResumeLayout(false);
             tableLayoutStatus.PerformLayout();
             groupBoxStatus.ResumeLayout(false);
