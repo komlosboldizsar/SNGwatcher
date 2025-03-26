@@ -20,17 +20,17 @@ namespace SNGwatcher
 
             valueCnMargin.Text = "--.-- dB";
             valueIdealRange.Text = _config.Receiver.IdealMin.ToString("F2").PadLeft(5, '0') + " - " + _config.Receiver.IdealMax.ToString("F2").PadLeft(5, '0') + " dB";
-            valueReceiverType.Text = _config.Receiver.Type;
-            valueReceiverAddress.Text = _config.Receiver.Address;
             if (_receiver != null)
             {
-                valueReceiverStatus.Text = _receiver.Type;
+                valueReceiverType.Text = _receiver.Type;
             }
             else
             {
-                valueReceiverStatus.Text = $"{_config.Receiver.Type} (unknown)";
-                valueReceiverStatus.ForeColor = Color.DarkRed;
+                valueReceiverType.Text = $"{_config.Receiver.Type} (unknown)";
+                valueReceiverType.ForeColor = Color.DarkRed;
             }
+            valueReceiverAddress.Text = _config.Receiver.Address;
+            valueReceiverStatus.Text = "-";            
             valueRemoteBaseUrl.Text = _config.Remote.BaseURL;
             valueRemoteId.Text = _config.Remote.ID;
             valueRemoteLastUpdate.Text = "-";
