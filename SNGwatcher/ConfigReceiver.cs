@@ -16,5 +16,11 @@ namespace SNGwatcher
         [JsonPropertyName("address")]
         public string Address { get; set; }
 
+        [JsonPropertyName("idealMin")]
+        public decimal IdealMin { get; set; }
+
+        [JsonPropertyName("idealMax")]
+        public decimal IdealMax { get; set; }
+
     }
 }
