@@ -29,273 +29,445 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            tableLayoutPanel1 = new TableLayoutPanel();
-            groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            groupBox3 = new GroupBox();
-            tableLayoutPanel3 = new TableLayoutPanel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            tableLayoutPanel1.SuspendLayout();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
+            tableLayoutStatus = new TableLayoutPanel();
+            labelCnMargin = new Label();
+            labelIdealRange = new Label();
+            groupBoxStatus = new GroupBox();
+            groupBoxReceiver = new GroupBox();
+            tableLayoutReceiver = new TableLayoutPanel();
+            labelReceiverType = new Label();
+            labelReceiverAddress = new Label();
+            groupBoxRemote = new GroupBox();
+            tableLayoutRemote = new TableLayoutPanel();
+            labelRemoteBaseUrl = new Label();
+            labelRemoteId = new Label();
+            labelRemoteLastUpdate = new Label();
+            labelRemoteLastSuccessfulUpdate = new Label();
+            labelReceiverStatus = new Label();
+            valueCnMargin = new Label();
+            valueIdealRange = new Label();
+            valueReceiverType = new Label();
+            valueReceiverAddress = new Label();
+            valueReceiverStatus = new Label();
+            valueRemoteBaseUrl = new Label();
+            valueRemoteId = new Label();
+            valueRemoteLastUpdate = new Label();
+            valueRemoteLastSuccessfulUpdate = new Label();
+            valueRemoteLastUpdateStatus = new Label();
+            tableLayoutStatus.SuspendLayout();
+            groupBoxStatus.SuspendLayout();
+            groupBoxReceiver.SuspendLayout();
+            tableLayoutReceiver.SuspendLayout();
+            groupBoxRemote.SuspendLayout();
+            tableLayoutRemote.SuspendLayout();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tableLayoutStatus
             // 
-            tableLayoutPanel1.AutoSize = true;
-            tableLayoutPanel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(label7, 0, 0);
-            tableLayoutPanel1.Controls.Add(label8, 0, 1);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(10, 27);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(760, 52);
-            tableLayoutPanel1.TabIndex = 0;
+            tableLayoutStatus.AutoSize = true;
+            tableLayoutStatus.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutStatus.ColumnCount = 4;
+            tableLayoutStatus.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutStatus.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutStatus.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutStatus.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutStatus.Controls.Add(labelCnMargin, 1, 0);
+            tableLayoutStatus.Controls.Add(labelIdealRange, 1, 1);
+            tableLayoutStatus.Controls.Add(valueIdealRange, 1, 1);
+            tableLayoutStatus.Controls.Add(valueCnMargin, 2, 0);
+            tableLayoutStatus.Dock = DockStyle.Fill;
+            tableLayoutStatus.Location = new Point(10, 27);
+            tableLayoutStatus.Name = "tableLayoutStatus";
+            tableLayoutStatus.RowCount = 2;
+            tableLayoutStatus.RowStyles.Add(new RowStyle());
+            tableLayoutStatus.RowStyles.Add(new RowStyle());
+            tableLayoutStatus.Size = new Size(760, 59);
+            tableLayoutStatus.TabIndex = 0;
             // 
-            // groupBox1
+            // labelCnMargin
             // 
-            groupBox1.AutoSize = true;
-            groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            groupBox1.Controls.Add(tableLayoutPanel1);
-            groupBox1.Dock = DockStyle.Top;
-            groupBox1.Location = new Point(10, 5);
-            groupBox1.Margin = new Padding(3, 3, 3, 10);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(10, 7, 10, 10);
-            groupBox1.Size = new Size(780, 89);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Status";
+            labelCnMargin.AutoSize = true;
+            labelCnMargin.Dock = DockStyle.Right;
+            labelCnMargin.Font = new Font("Consolas", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCnMargin.Location = new Point(200, 0);
+            labelCnMargin.Name = "labelCnMargin";
+            labelCnMargin.Padding = new Padding(0, 3, 10, 3);
+            labelCnMargin.Size = new Size(177, 35);
+            labelCnMargin.TabIndex = 0;
+            labelCnMargin.Text = "C/N margin:";
+            labelCnMargin.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // groupBox2
+            // labelIdealRange
             // 
-            groupBox2.AutoSize = true;
-            groupBox2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            groupBox2.Controls.Add(tableLayoutPanel2);
-            groupBox2.Dock = DockStyle.Top;
-            groupBox2.Location = new Point(10, 94);
-            groupBox2.Margin = new Padding(3, 3, 3, 10);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(10, 7, 10, 10);
-            groupBox2.Size = new Size(780, 89);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Receiver";
+            labelIdealRange.AutoSize = true;
+            labelIdealRange.Dock = DockStyle.Right;
+            labelIdealRange.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelIdealRange.Location = new Point(263, 35);
+            labelIdealRange.Name = "labelIdealRange";
+            labelIdealRange.Padding = new Padding(0, 3, 10, 3);
+            labelIdealRange.Size = new Size(114, 24);
+            labelIdealRange.TabIndex = 1;
+            labelIdealRange.Text = "Ideal range:";
+            labelIdealRange.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // tableLayoutPanel2
+            // groupBoxStatus
             // 
-            tableLayoutPanel2.AutoSize = true;
-            tableLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableLayoutPanel2.ColumnCount = 3;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Controls.Add(label1, 0, 0);
-            tableLayoutPanel2.Controls.Add(label2, 0, 1);
-            tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(10, 27);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 2;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(760, 52);
-            tableLayoutPanel2.TabIndex = 0;
+            groupBoxStatus.AutoSize = true;
+            groupBoxStatus.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxStatus.Controls.Add(tableLayoutStatus);
+            groupBoxStatus.Dock = DockStyle.Top;
+            groupBoxStatus.Location = new Point(10, 5);
+            groupBoxStatus.Margin = new Padding(3, 3, 3, 10);
+            groupBoxStatus.Name = "groupBoxStatus";
+            groupBoxStatus.Padding = new Padding(10, 7, 10, 10);
+            groupBoxStatus.Size = new Size(780, 96);
+            groupBoxStatus.TabIndex = 1;
+            groupBoxStatus.TabStop = false;
+            groupBoxStatus.Text = "Status";
             // 
-            // groupBox3
+            // groupBoxReceiver
             // 
-            groupBox3.AutoSize = true;
-            groupBox3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            groupBox3.Controls.Add(tableLayoutPanel3);
-            groupBox3.Dock = DockStyle.Top;
-            groupBox3.Location = new Point(10, 183);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(10, 7, 10, 10);
-            groupBox3.Size = new Size(780, 141);
-            groupBox3.TabIndex = 3;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Remote";
+            groupBoxReceiver.AutoSize = true;
+            groupBoxReceiver.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxReceiver.Controls.Add(tableLayoutReceiver);
+            groupBoxReceiver.Dock = DockStyle.Top;
+            groupBoxReceiver.Location = new Point(10, 101);
+            groupBoxReceiver.Margin = new Padding(3, 3, 3, 10);
+            groupBoxReceiver.Name = "groupBoxReceiver";
+            groupBoxReceiver.Padding = new Padding(10, 7, 10, 10);
+            groupBoxReceiver.Size = new Size(780, 115);
+            groupBoxReceiver.TabIndex = 2;
+            groupBoxReceiver.TabStop = false;
+            groupBoxReceiver.Text = "Receiver";
             // 
-            // tableLayoutPanel3
+            // tableLayoutReceiver
             // 
-            tableLayoutPanel3.AutoSize = true;
-            tableLayoutPanel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableLayoutPanel3.ColumnCount = 4;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Controls.Add(label3, 0, 0);
-            tableLayoutPanel3.Controls.Add(label4, 0, 1);
-            tableLayoutPanel3.Controls.Add(label5, 0, 2);
-            tableLayoutPanel3.Controls.Add(label6, 0, 3);
-            tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(10, 27);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 4;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            tableLayoutPanel3.RowStyles.Add(new RowStyle());
-            tableLayoutPanel3.Size = new Size(760, 104);
-            tableLayoutPanel3.TabIndex = 0;
+            tableLayoutReceiver.AutoSize = true;
+            tableLayoutReceiver.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutReceiver.ColumnCount = 3;
+            tableLayoutReceiver.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutReceiver.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutReceiver.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutReceiver.Controls.Add(labelReceiverType, 0, 0);
+            tableLayoutReceiver.Controls.Add(labelReceiverAddress, 0, 1);
+            tableLayoutReceiver.Controls.Add(labelReceiverStatus, 0, 2);
+            tableLayoutReceiver.Controls.Add(valueReceiverType, 1, 0);
+            tableLayoutReceiver.Controls.Add(valueReceiverAddress, 1, 1);
+            tableLayoutReceiver.Controls.Add(valueReceiverStatus, 1, 2);
+            tableLayoutReceiver.Dock = DockStyle.Fill;
+            tableLayoutReceiver.Location = new Point(10, 27);
+            tableLayoutReceiver.Name = "tableLayoutReceiver";
+            tableLayoutReceiver.RowCount = 3;
+            tableLayoutReceiver.RowStyles.Add(new RowStyle());
+            tableLayoutReceiver.RowStyles.Add(new RowStyle());
+            tableLayoutReceiver.RowStyles.Add(new RowStyle());
+            tableLayoutReceiver.Size = new Size(760, 78);
+            tableLayoutReceiver.TabIndex = 0;
             // 
-            // label1
+            // labelReceiverType
             // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Left;
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Padding = new Padding(0, 3, 0, 3);
-            label1.Size = new Size(43, 26);
-            label1.TabIndex = 0;
-            label1.Text = "Type:";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            labelReceiverType.AutoSize = true;
+            labelReceiverType.Dock = DockStyle.Left;
+            labelReceiverType.Location = new Point(3, 0);
+            labelReceiverType.Name = "labelReceiverType";
+            labelReceiverType.Padding = new Padding(0, 3, 0, 3);
+            labelReceiverType.Size = new Size(43, 26);
+            labelReceiverType.TabIndex = 0;
+            labelReceiverType.Text = "Type:";
+            labelReceiverType.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // labelReceiverAddress
             // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Left;
-            label2.Location = new Point(3, 26);
-            label2.Name = "label2";
-            label2.Padding = new Padding(0, 3, 0, 3);
-            label2.Size = new Size(65, 26);
-            label2.TabIndex = 1;
-            label2.Text = "Address:";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            labelReceiverAddress.AutoSize = true;
+            labelReceiverAddress.Dock = DockStyle.Left;
+            labelReceiverAddress.Location = new Point(3, 26);
+            labelReceiverAddress.Name = "labelReceiverAddress";
+            labelReceiverAddress.Padding = new Padding(0, 3, 0, 3);
+            labelReceiverAddress.Size = new Size(65, 26);
+            labelReceiverAddress.TabIndex = 1;
+            labelReceiverAddress.Text = "Address:";
+            labelReceiverAddress.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // groupBoxRemote
             // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Left;
-            label3.Location = new Point(3, 0);
-            label3.Name = "label3";
-            label3.Padding = new Padding(0, 3, 0, 3);
-            label3.Size = new Size(73, 26);
-            label3.TabIndex = 0;
-            label3.Text = "Base URL:";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            groupBoxRemote.AutoSize = true;
+            groupBoxRemote.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxRemote.Controls.Add(tableLayoutRemote);
+            groupBoxRemote.Dock = DockStyle.Top;
+            groupBoxRemote.Location = new Point(10, 216);
+            groupBoxRemote.Name = "groupBoxRemote";
+            groupBoxRemote.Padding = new Padding(10, 7, 10, 10);
+            groupBoxRemote.Size = new Size(780, 141);
+            groupBoxRemote.TabIndex = 3;
+            groupBoxRemote.TabStop = false;
+            groupBoxRemote.Text = "Remote";
             // 
-            // label4
+            // tableLayoutRemote
             // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Left;
-            label4.Location = new Point(3, 26);
-            label4.Name = "label4";
-            label4.Padding = new Padding(0, 3, 0, 3);
-            label4.Size = new Size(27, 26);
-            label4.TabIndex = 1;
-            label4.Text = "ID:";
-            label4.TextAlign = ContentAlignment.MiddleLeft;
+            tableLayoutRemote.AutoSize = true;
+            tableLayoutRemote.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            tableLayoutRemote.ColumnCount = 4;
+            tableLayoutRemote.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutRemote.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutRemote.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F));
+            tableLayoutRemote.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutRemote.Controls.Add(labelRemoteBaseUrl, 0, 0);
+            tableLayoutRemote.Controls.Add(labelRemoteId, 0, 1);
+            tableLayoutRemote.Controls.Add(labelRemoteLastUpdate, 0, 2);
+            tableLayoutRemote.Controls.Add(labelRemoteLastSuccessfulUpdate, 0, 3);
+            tableLayoutRemote.Controls.Add(valueRemoteBaseUrl, 1, 0);
+            tableLayoutRemote.Controls.Add(valueRemoteId, 1, 1);
+            tableLayoutRemote.Controls.Add(valueRemoteLastUpdate, 1, 2);
+            tableLayoutRemote.Controls.Add(valueRemoteLastSuccessfulUpdate, 1, 3);
+            tableLayoutRemote.Controls.Add(valueRemoteLastUpdateStatus, 2, 2);
+            tableLayoutRemote.Dock = DockStyle.Fill;
+            tableLayoutRemote.Location = new Point(10, 27);
+            tableLayoutRemote.Name = "tableLayoutRemote";
+            tableLayoutRemote.RowCount = 4;
+            tableLayoutRemote.RowStyles.Add(new RowStyle());
+            tableLayoutRemote.RowStyles.Add(new RowStyle());
+            tableLayoutRemote.RowStyles.Add(new RowStyle());
+            tableLayoutRemote.RowStyles.Add(new RowStyle());
+            tableLayoutRemote.Size = new Size(760, 104);
+            tableLayoutRemote.TabIndex = 0;
             // 
-            // label5
+            // labelRemoteBaseUrl
             // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Left;
-            label5.Location = new Point(3, 52);
-            label5.Name = "label5";
-            label5.Padding = new Padding(0, 3, 0, 3);
-            label5.Size = new Size(89, 26);
-            label5.TabIndex = 2;
-            label5.Text = "Last update:";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
+            labelRemoteBaseUrl.AutoSize = true;
+            labelRemoteBaseUrl.Dock = DockStyle.Left;
+            labelRemoteBaseUrl.Location = new Point(3, 0);
+            labelRemoteBaseUrl.Name = "labelRemoteBaseUrl";
+            labelRemoteBaseUrl.Padding = new Padding(0, 3, 0, 3);
+            labelRemoteBaseUrl.Size = new Size(73, 26);
+            labelRemoteBaseUrl.TabIndex = 0;
+            labelRemoteBaseUrl.Text = "Base URL:";
+            labelRemoteBaseUrl.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // labelRemoteId
             // 
-            label6.AutoSize = true;
-            label6.Dock = DockStyle.Left;
-            label6.Location = new Point(3, 78);
-            label6.Name = "label6";
-            label6.Padding = new Padding(0, 3, 0, 3);
-            label6.Size = new Size(158, 26);
-            label6.TabIndex = 3;
-            label6.Text = "Last successful update:";
-            label6.TextAlign = ContentAlignment.MiddleLeft;
+            labelRemoteId.AutoSize = true;
+            labelRemoteId.Dock = DockStyle.Left;
+            labelRemoteId.Location = new Point(3, 26);
+            labelRemoteId.Name = "labelRemoteId";
+            labelRemoteId.Padding = new Padding(0, 3, 0, 3);
+            labelRemoteId.Size = new Size(27, 26);
+            labelRemoteId.TabIndex = 1;
+            labelRemoteId.Text = "ID:";
+            labelRemoteId.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label7
+            // labelRemoteLastUpdate
             // 
-            label7.AutoSize = true;
-            label7.Dock = DockStyle.Left;
-            label7.Location = new Point(3, 0);
-            label7.Name = "label7";
-            label7.Padding = new Padding(0, 3, 0, 3);
-            label7.Size = new Size(68, 26);
-            label7.TabIndex = 0;
-            label7.Text = "Receiver:";
-            label7.TextAlign = ContentAlignment.MiddleLeft;
+            labelRemoteLastUpdate.AutoSize = true;
+            labelRemoteLastUpdate.Dock = DockStyle.Left;
+            labelRemoteLastUpdate.Location = new Point(3, 52);
+            labelRemoteLastUpdate.Name = "labelRemoteLastUpdate";
+            labelRemoteLastUpdate.Padding = new Padding(0, 3, 0, 3);
+            labelRemoteLastUpdate.Size = new Size(89, 26);
+            labelRemoteLastUpdate.TabIndex = 2;
+            labelRemoteLastUpdate.Text = "Last update:";
+            labelRemoteLastUpdate.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // labelRemoteLastSuccessfulUpdate
             // 
-            label8.AutoSize = true;
-            label8.Dock = DockStyle.Left;
-            label8.Location = new Point(3, 26);
-            label8.Name = "label8";
-            label8.Padding = new Padding(0, 3, 0, 3);
-            label8.Size = new Size(89, 26);
-            label8.TabIndex = 1;
-            label8.Text = "C/N margin:";
-            label8.TextAlign = ContentAlignment.MiddleLeft;
+            labelRemoteLastSuccessfulUpdate.AutoSize = true;
+            labelRemoteLastSuccessfulUpdate.Dock = DockStyle.Left;
+            labelRemoteLastSuccessfulUpdate.Location = new Point(3, 78);
+            labelRemoteLastSuccessfulUpdate.Name = "labelRemoteLastSuccessfulUpdate";
+            labelRemoteLastSuccessfulUpdate.Padding = new Padding(0, 3, 0, 3);
+            labelRemoteLastSuccessfulUpdate.Size = new Size(158, 26);
+            labelRemoteLastSuccessfulUpdate.TabIndex = 3;
+            labelRemoteLastSuccessfulUpdate.Text = "Last successful update:";
+            labelRemoteLastSuccessfulUpdate.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // Form1
+            // labelReceiverStatus
+            // 
+            labelReceiverStatus.AutoSize = true;
+            labelReceiverStatus.Dock = DockStyle.Left;
+            labelReceiverStatus.Location = new Point(3, 52);
+            labelReceiverStatus.Name = "labelReceiverStatus";
+            labelReceiverStatus.Padding = new Padding(0, 3, 0, 3);
+            labelReceiverStatus.Size = new Size(52, 26);
+            labelReceiverStatus.TabIndex = 2;
+            labelReceiverStatus.Text = "Status:";
+            labelReceiverStatus.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueCnMargin
+            // 
+            valueCnMargin.AutoSize = true;
+            valueCnMargin.Dock = DockStyle.Left;
+            valueCnMargin.Font = new Font("Consolas", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            valueCnMargin.Location = new Point(383, 0);
+            valueCnMargin.Name = "valueCnMargin";
+            valueCnMargin.Padding = new Padding(10, 0, 0, 0);
+            valueCnMargin.Size = new Size(163, 35);
+            valueCnMargin.TabIndex = 2;
+            valueCnMargin.Text = "[--.-- dB]";
+            valueCnMargin.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueIdealRange
+            // 
+            valueIdealRange.AutoSize = true;
+            valueIdealRange.Dock = DockStyle.Left;
+            valueIdealRange.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            valueIdealRange.Location = new Point(383, 35);
+            valueIdealRange.Name = "valueIdealRange";
+            valueIdealRange.Padding = new Padding(10, 0, 0, 0);
+            valueIdealRange.Size = new Size(178, 24);
+            valueIdealRange.TabIndex = 3;
+            valueIdealRange.Text = "[--.--] - [--.--] dB";
+            valueIdealRange.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueReceiverType
+            // 
+            valueReceiverType.AutoSize = true;
+            valueReceiverType.Dock = DockStyle.Left;
+            valueReceiverType.Location = new Point(203, 0);
+            valueReceiverType.Name = "valueReceiverType";
+            valueReceiverType.Padding = new Padding(0, 3, 0, 3);
+            valueReceiverType.Size = new Size(69, 26);
+            valueReceiverType.TabIndex = 3;
+            valueReceiverType.Text = "[RX8200]";
+            valueReceiverType.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueReceiverAddress
+            // 
+            valueReceiverAddress.AutoSize = true;
+            valueReceiverAddress.Dock = DockStyle.Left;
+            valueReceiverAddress.Location = new Point(203, 26);
+            valueReceiverAddress.Name = "valueReceiverAddress";
+            valueReceiverAddress.Padding = new Padding(0, 3, 0, 3);
+            valueReceiverAddress.Size = new Size(92, 26);
+            valueReceiverAddress.TabIndex = 4;
+            valueReceiverAddress.Text = "[192.168.1.1]";
+            valueReceiverAddress.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueReceiverStatus
+            // 
+            valueReceiverStatus.AutoSize = true;
+            valueReceiverStatus.Dock = DockStyle.Left;
+            valueReceiverStatus.Location = new Point(203, 52);
+            valueReceiverStatus.Name = "valueReceiverStatus";
+            valueReceiverStatus.Padding = new Padding(0, 3, 0, 3);
+            valueReceiverStatus.Size = new Size(39, 26);
+            valueReceiverStatus.TabIndex = 5;
+            valueReceiverStatus.Text = "[OK]";
+            valueReceiverStatus.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueRemoteBaseUrl
+            // 
+            valueRemoteBaseUrl.AutoSize = true;
+            tableLayoutRemote.SetColumnSpan(valueRemoteBaseUrl, 2);
+            valueRemoteBaseUrl.Dock = DockStyle.Left;
+            valueRemoteBaseUrl.Location = new Point(203, 0);
+            valueRemoteBaseUrl.Name = "valueRemoteBaseUrl";
+            valueRemoteBaseUrl.Padding = new Padding(0, 3, 0, 3);
+            valueRemoteBaseUrl.Size = new Size(197, 26);
+            valueRemoteBaseUrl.TabIndex = 4;
+            valueRemoteBaseUrl.Text = "[https://sngwatcher.org.info]";
+            valueRemoteBaseUrl.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueRemoteId
+            // 
+            valueRemoteId.AutoSize = true;
+            valueRemoteId.Dock = DockStyle.Left;
+            valueRemoteId.Location = new Point(203, 26);
+            valueRemoteId.Name = "valueRemoteId";
+            valueRemoteId.Padding = new Padding(0, 3, 0, 3);
+            valueRemoteId.Size = new Size(67, 26);
+            valueRemoteId.TabIndex = 5;
+            valueRemoteId.Text = "[hun999]";
+            valueRemoteId.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueRemoteLastUpdate
+            // 
+            valueRemoteLastUpdate.AutoSize = true;
+            valueRemoteLastUpdate.Dock = DockStyle.Left;
+            valueRemoteLastUpdate.Location = new Point(203, 52);
+            valueRemoteLastUpdate.Name = "valueRemoteLastUpdate";
+            valueRemoteLastUpdate.Padding = new Padding(0, 3, 0, 3);
+            valueRemoteLastUpdate.Size = new Size(153, 26);
+            valueRemoteLastUpdate.TabIndex = 6;
+            valueRemoteLastUpdate.Text = "[2000-01-01 12:00:00]";
+            valueRemoteLastUpdate.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueRemoteLastSuccessfulUpdate
+            // 
+            valueRemoteLastSuccessfulUpdate.AutoSize = true;
+            valueRemoteLastSuccessfulUpdate.Dock = DockStyle.Left;
+            valueRemoteLastSuccessfulUpdate.Location = new Point(203, 78);
+            valueRemoteLastSuccessfulUpdate.Name = "valueRemoteLastSuccessfulUpdate";
+            valueRemoteLastSuccessfulUpdate.Padding = new Padding(0, 3, 0, 3);
+            valueRemoteLastSuccessfulUpdate.Size = new Size(153, 26);
+            valueRemoteLastSuccessfulUpdate.TabIndex = 7;
+            valueRemoteLastSuccessfulUpdate.Text = "[2000-01-01 12:00:00]";
+            valueRemoteLastSuccessfulUpdate.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // valueRemoteLastUpdateStatus
+            // 
+            valueRemoteLastUpdateStatus.AutoSize = true;
+            valueRemoteLastUpdateStatus.Dock = DockStyle.Left;
+            valueRemoteLastUpdateStatus.Location = new Point(403, 52);
+            valueRemoteLastUpdateStatus.Name = "valueRemoteLastUpdateStatus";
+            valueRemoteLastUpdateStatus.Padding = new Padding(0, 3, 0, 3);
+            valueRemoteLastUpdateStatus.Size = new Size(39, 26);
+            valueRemoteLastUpdateStatus.TabIndex = 8;
+            valueRemoteLastUpdateStatus.Text = "[OK]";
+            valueRemoteLastUpdateStatus.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            ClientSize = new Size(800, 388);
+            Controls.Add(groupBoxRemote);
+            Controls.Add(groupBoxReceiver);
+            Controls.Add(groupBoxStatus);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "MainForm";
             Padding = new Padding(10, 5, 10, 10);
             Text = "SNGwatch";
-            tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            tableLayoutPanel2.ResumeLayout(false);
-            tableLayoutPanel2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
+            tableLayoutStatus.ResumeLayout(false);
+            tableLayoutStatus.PerformLayout();
+            groupBoxStatus.ResumeLayout(false);
+            groupBoxStatus.PerformLayout();
+            groupBoxReceiver.ResumeLayout(false);
+            groupBoxReceiver.PerformLayout();
+            tableLayoutReceiver.ResumeLayout(false);
+            tableLayoutReceiver.PerformLayout();
+            groupBoxRemote.ResumeLayout(false);
+            groupBoxRemote.PerformLayout();
+            tableLayoutRemote.ResumeLayout(false);
+            tableLayoutRemote.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private TableLayoutPanel tableLayoutPanel2;
-        private Label label1;
-        private Label label2;
-        private GroupBox groupBox3;
-        private TableLayoutPanel tableLayoutPanel3;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label7;
-        private Label label8;
-        private Label label6;
+        private TableLayoutPanel tableLayoutStatus;
+        private GroupBox groupBoxStatus;
+        private GroupBox groupBoxReceiver;
+        private TableLayoutPanel tableLayoutReceiver;
+        private Label labelReceiverType;
+        private Label labelReceiverAddress;
+        private GroupBox groupBoxRemote;
+        private TableLayoutPanel tableLayoutRemote;
+        private Label labelRemoteBaseUrl;
+        private Label labelRemoteId;
+        private Label labelRemoteLastUpdate;
+        private Label labelCnMargin;
+        private Label labelIdealRange;
+        private Label labelRemoteLastSuccessfulUpdate;
+        private Label valueCnMargin;
+        private Label valueIdealRange;
+        private Label labelReceiverStatus;
+        private Label valueReceiverType;
+        private Label valueReceiverAddress;
+        private Label valueReceiverStatus;
+        private Label valueRemoteBaseUrl;
+        private Label valueRemoteId;
+        private Label valueRemoteLastUpdate;
+        private Label valueRemoteLastSuccessfulUpdate;
+        private Label valueRemoteLastUpdateStatus;
     }
 }
