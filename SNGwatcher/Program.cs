@@ -8,6 +8,8 @@ namespace SNGwatcher
         [STAThread]
         static void Main(string[] args)
         {
+            ReceiverRegister.AddFactory(new ReceiverRX8200.Factory());
+            //
             string configPath = (args.Length > 1) ? args[1] : DEFAULT_CONFIG;
             ConfigReader configReader = new(configPath);
             Config config = configReader.Read();
