@@ -5,13 +5,15 @@ namespace SNGwatcher
 
         public MainForm() => InitializeComponent();
 
-        public MainForm(Config config)
+        public MainForm(Config config, IReceiver receiver)
             : this()
         {
             _config = config;
+            _receiver = receiver;
         }
 
         private readonly Config _config;
+        private readonly IReceiver _receiver;
 
         private void MainForm_Load(object sender, EventArgs e)
         {
