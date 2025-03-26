@@ -10,7 +10,7 @@ namespace SNGwatcher
     public interface IReceiver
     {
         string Type { get; }
-        ReceiverData ReadStatus();
+        Task<ReceiverData> ReadStatusAsync();
         event ReceiverStatusUpdateDelegate StatusUpdate;
     }
 
